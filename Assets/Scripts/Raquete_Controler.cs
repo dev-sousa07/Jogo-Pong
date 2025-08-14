@@ -8,6 +8,7 @@ public class Raquete : MonoBehaviour
     // Vector 3
     private Vector3 minhaposicao;
     private float posicaoRaqueteY;
+
     public float velocidade = 5f;
     public float meuLimite = 3.4f;
 
@@ -61,9 +62,20 @@ public class Raquete : MonoBehaviour
                     posicaoRaqueteY -= velocidade * Time.deltaTime;
                     Debug.Log("Descendo");
                 }
+                else
+                {
+                    // Automatico  
+
+                    if (Input.GetKey(KeyCode.Return))
+                    {
+                        iaControl = true;
+
+                    }
+                }
             }//Controloando o Player 2
             else
-            {   //Subindo
+            {  
+                //Subindo
                 if (Input.GetKey(KeyCode.W))
                 {
                     if (posicaoRaqueteY < meuLimite)
@@ -83,8 +95,15 @@ public class Raquete : MonoBehaviour
         // Se a raquete estiver no modo IA
         else
         {
+            // Tirando do automatica
+            // Checando se a seta para cima ou para baixo foi pressionada
+            if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow))
+            {
+                iaControl = false;
+                return; // Sai do método Update para evitar que a IA mova a raquete
+            }
             // Função Math para tranformar o valor em outro lentamente
-          posicaoRaqueteY = Mathf.Lerp(posicaoRaqueteY, transformBola.position.y, 0.02f);
+            posicaoRaqueteY = Mathf.Lerp(posicaoRaqueteY, transformBola.position.y, 0.02f);
         }
 
         //impedindo que saia por baixo da tela
