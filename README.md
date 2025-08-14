@@ -42,7 +42,8 @@ O objetivo é bloquear a bola e passsa-la pela raquete adversária.
 ---
 
 ## Contribuição:
-Sinta-se à vontade para criar novas funcionalidades
+Sinta-se à vontade para criar novas funcionalidades.
+
 ---
 
 ## Autor
