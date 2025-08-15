@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class Bola_Controller : MonoBehaviour
 {
-    //Criando a variável para saber quem é o rigdbody da bola
+    //Criando a variï¿½vel para saber quem ï¿½ o rigdbody da bola
     public Rigidbody2D rb;
 
     private Vector2 minhaVelocidade;
@@ -48,7 +48,7 @@ public class Bola_Controller : MonoBehaviour
             minhaVelocidade.y = velocidade;
             int direcao = Random.Range(0, 4);
 
-            //Valor aleatório
+            //Valor aleatï¿½rio
             if (direcao == 0)
             {
 
@@ -73,14 +73,13 @@ public class Bola_Controller : MonoBehaviour
             // Adicionando velocidade para a esquerda
             rb.velocity = minhaVelocidade;
         }
-        // Verificando se o jogo já foi iniciado
+        // Verificando se o jogo jï¿½ foi iniciado
         if (transform.position.x > limiteHorizontal || transform.position.x < -limiteHorizontal)
         {
             SceneManager.LoadScene(GameOver);
         }
     }
-
-        // Criando colisão
+         // Criando colisï¿½o
         private void OnCollisionEnter2D(Collision2D collision)
         {
         
