@@ -1,7 +1,6 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,39 +12,28 @@ public class Bola_Controller : MonoBehaviour
     private Vector2 minhaVelocidade;
 
     public float velocidade = 5f;
-
-    public float direcao;
-
     public float limiteHorizontal = 11f;
 
     public AudioClip boing;
 
-    public Transform camera;
-
     public float delayInicio = 2f;
-
     public bool jogoIniciado = false;
 
     public string GameOver;
-    // Start is called before the first frame update
+
     void Start()
     {
-     
+        // reseta valores iniciais
     }
 
-    // Update is called once per frame
     void Update()
     {
         //Delay
         delayInicio -= Time.deltaTime;
 
-        if (delayInicio <= 0 && jogoIniciado == false)
+        // verifica se pode iniciar o jogo
         {
             jogoIniciado = true;
-
-            // Iniciando o jogo
-            minhaVelocidade.x = velocidade;
-            minhaVelocidade.y = velocidade;
             int direcao = Random.Range(0, 4);
 
             //Valor aleat�rio
