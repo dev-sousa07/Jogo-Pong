@@ -362,7 +362,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 389927848}
   velocidade: 5
-  direcao: 2
   limiteHorizontal: 11
   boing: {fileID: 8300000, guid: 36485aafe29da1046a0b9fe394ec9f84, type: 3}
   camera: {fileID: 519420032}
@@ -445,11 +444,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2abee319ca6d4b3419396dc646626077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bolaTransform: {fileID: 389927850}
+  automatico: 0
+  player1: 0
   velocidade: 5
   meuLimite: 3.4
-  player1: 0
-  iaControl: 0
-  transformBola: {fileID: 389927850}
+  minhapos: {x: 0, y: 0, z: 0}
+  meuEixoy: 0
 --- !u!212 &431839266
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -829,11 +830,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2abee319ca6d4b3419396dc646626077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bolaTransform: {fileID: 389927850}
+  automatico: 0
+  player1: 1
   velocidade: 5
   meuLimite: 3.4
-  player1: 1
-  iaControl: 1
-  transformBola: {fileID: 389927850}
+  minhapos: {x: 0, y: 0, z: 0}
+  meuEixoy: 0
 --- !u!1 &1327237304
 GameObject:
   m_ObjectHideFlags: 0
